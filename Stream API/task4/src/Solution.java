@@ -22,7 +22,8 @@ public class Solution {
     }
 
     private static Boolean allReadingTasks(List<Task> tasks) {
-        return null;
-        // Ваш код здесь
+        return tasks.stream()
+                .filter(e -> e.getType() == TaskType.READING)
+                .allMatch(e -> e.getTags().contains("books"));
     }
 }

@@ -4,6 +4,7 @@ import java.util.Set;
 
 public class Task {
     private final Integer id;
+    private final String name;
 
     private final String title;
 
@@ -18,8 +19,9 @@ public class Task {
 
     private LocalDate dueOn;
 
-    public Task(Integer id, String title, TaskType type, LocalDate createdOn) {
+    public Task(Integer id, String name, String title, TaskType type, LocalDate createdOn) {
         this.id = id;
+        this.name = name;
         this.title = title;
         this.type = type;
         this.createdOn = createdOn;
@@ -37,6 +39,10 @@ public class Task {
 
     public String getTitle() {
         return title;
+    }
+
+    public String getName() {
+        return name;
     }
 
     public TaskType getType() {
